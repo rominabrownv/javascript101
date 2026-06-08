@@ -44,3 +44,20 @@ const frameworks = [
  *    para agregar una nueva fila con estos datos al cuerpo de la tabla HTML.
  */
 
+for (let framework of frameworks) {
+  const [
+    frameworkName,
+    releaseDate,
+    usersName,
+    popularityPercentage
+  ] = framework.split("|");
+
+  const frameworkObj = {
+    frameworkName: frameworkName.trim(),
+    releaseDate: releaseDate.trim(),
+    usersName: usersName.trim(),
+    popularityPercentage: popularityPercentage.trim()
+  };
+
+  addRow(frameworkObj, "data-frameworks");
+}
